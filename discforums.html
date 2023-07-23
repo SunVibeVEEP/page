@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SunVibe Discussion Forum</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffefaa;       
+        }
+
+        .subbody{
+          max-width: 800px;
+            margin: auto;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background-color: #003946;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            background-color: #ffcb05;
+            color: #001f2e;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button {
+            background-color: #003946;
+            color: #fff;
+            border: none;
+            width: 250px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #001f2e;
+        }
+
+.navbar {
+    background-color: #001f2e;
+    display: flex; /* Align the navbar items to the left using flexbox */
+    justify-content: flex-start; /* Align the items to the start (left) of the flex container */
+  }
+
+  .navbar a {
+    color: #fff;
+    font-size: large;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .navbar a:hover:not(.active) {
+    background-color: #003946;
+  }
+
+  .active {
+    background-color: #001f2e;
+    font-weight: bold;
+  }
+
+  .centering {
+    text-align: center;
+    background-color: #003946;
+  }
+
+  .new-goal-section {
+            display: none;
+            margin-top: 20px;
+            background-color: #003946;
+            border: 1px solid #ffcb05;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="active" href="index.html">SUNVIBE</a>
+    <a href="index.html">Home</a>
+    <a href="#news">News</a>
+    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <div class="subbody">
+    <div style="background-color:  #ffffff; padding: 20px;">
+    <h1 style="font-weight: bold; text-align: center; color: #003946; font-family: Georgia, 'Times New Roman', Times, serif;">DISCUSSION FORUM</h1>
+    <div style="background-color: white;" class="text-center">
+        <img src="intro.png" style="width: 100%;">
+        <br>
+       
+        <div class="text-center">
+          <button class="cta-btn" onclick="toggleNewGoal()">Join the Community!</button>
+        </div>
+
+        <div class="new-goal-section" id="newGoalSection">
+          <h4 style="font-weight: bold; color: #ffcb05;">Join the Community!</h4>
+          <form>
+            <br>
+              <label for="goalTitle">Forum Title:</label>
+              <input type="text" id="goalTitle" name="goalTitle" required><br>
+  
+              <label for="description">Username:</label>
+              <input id="description" name="description" required></textarea><br>
+  
+              <label for="startDate">Message:</label>
+              <textarea id="date" id="startDate" name="startDate"  rows="4" required></textarea><br>
+              <div class="text-center">
+                <br>
+                <button type="submit" class="submit-btn">Submit Goal</button>
+            </div>
+          </div>  
+  
+    </div>
+  </div>
+    <div style="background-color:  #ffcb05;">
+      <h1 style="font-weight: bold; text-align: center; color: #003946; font-family: Georgia, 'Times New Roman', Times, serif; padding-top: 20px;">FORUM THREADS</h1>
+        <img src="forum1.png" style="width: 100%;">
+        <br>
+        <img src="forum2.png" style="width: 100%;">
+        <a href="index.html" class="back-button">Go Back to Homepage</a>
+        <br>
+    </div>
+  </div>
+  <script>
+    function toggleNewGoal() {
+        var newGoalSection = document.getElementById("newGoalSection");
+        if (newGoalSection.style.display === "none") {
+            newGoalSection.style.display = "block";
+        } else {
+            newGoalSection.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
